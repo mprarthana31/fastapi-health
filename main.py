@@ -6,4 +6,4 @@ app = FastAPI()
 
 @app.get("/health", status_code=status.HTTP_200_OK)
 async def root():
-    return {"git_sha":os.getenv("GIT_SHA"),"build_at":os.getenv("BUILD_AT")}
+    return {"git_sha":os.getenv("RENDER_GIT_COMMIT"),"build_at":os.getenv("BUILD_AT")}
